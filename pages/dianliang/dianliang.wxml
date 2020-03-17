@@ -1,0 +1,51 @@
+<!-- tab -->
+<block wx:if="{{loadingShow}}">
+  <loading>
+    加载中...
+  </loading>
+</block>
+<view>
+<!-- content -->
+  <view>
+    <view class="table">
+      <block wx:for="{{trainApprovalList}}" wx:key="{{code}}">
+        <view class="tr bg-g pb13 bgqs">
+          <view class="clearfix">
+            <view class="pt13 fs12 fl">
+              <text class="mr40">{{item.company_name}}</text>
+              <!-- <text class="mr40">item.company_name</text> -->
+            </view>
+            <!-- <view class="fr fs12"><text decode='true'>{{item.handle_type}}</text></view> -->
+            <view class="pt13 fr fs12 relative">
+              <!-- <text>政府检查</text> -->
+              <text decode='true'>{{item.handle_common}}</text>
+              <view class="right_rectangle"></view>
+            </view>
+          </view>
+          <view class="pt10 pb10 clearfix fs14">
+            <view>
+              <text class="mr20" decode='true'>购电&nbsp;{{item.buy_power}}mwh</text>
+              <text decode='true'>用电&nbsp;{{item.real_user_power}}mwh</text>
+            </view>
+          </view>
+          <view class="clearfix fs13">
+            <view class="fl">
+              <text>{{item.add_datetime}}</text>
+              <!-- <text>2011-11-11 11:11:11</text> -->
+            </view>
+            <view class="fr fs12" wx:if="{{item.alarm_type == 1}}">
+              <text class="fl pl10">高报警  {{item.area_value}}%</text>
+            </view>
+            <view class="fr fs12" wx:else>
+              <text class="fl pl10">低报警  {{item.area_value}}%</text>
+            </view>
+          </view>
+        </view>
+      </block>
+      <view class="more_data" wx:if="{{hasMore}}">加载更多中...</view>
+      <view class="finish" wx:if="{{finish}}">数据已加载完毕</view> 
+    </view>
+  </view>
+  
+</view>
+

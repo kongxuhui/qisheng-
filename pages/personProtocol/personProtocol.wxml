@@ -1,0 +1,9 @@
+<!--pages/personProtocol/personProtocol.wxml-->
+<view>
+  <view class="pl10 pr5 pt5 pb5">
+    <view class="center fs18">用户协议</view>
+    <text class="fs12">
+      此小程序由启申研发，用户注册后产生的损失启申不承担任何责任。
+    </text>
+  </view>
+</view>

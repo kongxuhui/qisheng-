@@ -1,0 +1,11 @@
+<view class="container pl10 pr10">
+  <view class="border pl10 pr10">
+    <view class="wd100 h350 xuxian middle mt10">
+      <!-- <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas> -->
+      <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ec1 }}"></ec-canvas>
+    </view>
+    <view class="wd100 h250 xuxian middle mt30 mb30 pb20 relative">
+      <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
+    </view>
+  </view>
+</view>
